@@ -1,0 +1,107 @@
+.nav-main {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 100vw;
+  padding: 0.2rem;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  z-index: 1000;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5rem 15rem 0.5rem 0.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+li {
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 0.2rem;
+  cursor: pointer;
+  color: white;
+}
+.pixo {
+  height: 2.75rem;
+  width: 2.75rem;
+  background-image: url(./images/pixonoid.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -0.5rem;
+  margin-left: 0.1rem;
+  margin-right: 0.4rem;
+  padding: 0.1rem;
+}
+.pixo-name {
+  font-size: 1.7rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.hamburger {
+  position: absolute;
+  border: none;
+  outline: none;
+  background: transparent;
+  top: 40px;
+  font-size: 1.5rem;
+  display: none;
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  .nav-main {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo {
+    margin: 1rem 0.3rem 0rem 1rem;
+  }
+  .pixo {
+    height: 2rem;
+    width: 2rem;
+  }
+  .pixo-name {
+    font-size: 1.5rem;
+  }
+  ul {
+    flex-direction: column;
+    height: auto;
+    /* display: none; */
+  }
+  li:nth-child(1) {
+    border-top: 1px solid white;
+    margin-top: 40px;
+  }
+  li {
+    width: 80%;
+    text-align: center;
+    border-top: 1px solid white;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+}
